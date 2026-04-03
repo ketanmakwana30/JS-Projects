@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #85b6b2;
+}
+
+
+.container {
+    padding: 40px;
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    background-color: #285A48;
+    border-radius: 12px;
+    height: auto;
+    width: 400px;
+    min-height: 350px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input,
+button {
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    color: black;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+button {
+        background-color:#132b23;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+}
+button:hover{
+    background-color: #459077;
+}
+
+ul {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    list-style-type: none;
+    background-color: #B0E4CC;
+
+}
+
+.delete {
+    background-color: rgba(255, 0, 0, 0.691);
+    padding: 8px;
+    border-radius: 8px;
+    width: 80px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
