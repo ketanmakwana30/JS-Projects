@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="display" placeholder="0" readonly>
+        <div class="btns">
+            <button class="btn keys " onclick="allClear()">AC</button>
+            <button class="btn keys " onclick="del()">DEL</button>
+            <button class="btn keys " onclick="addValue('%')">%</button>
+            <button class="btn keys " onclick="addValue('/')">/</button>
+            <button class="btn num" onclick="addValue('7')">7</button>
+            <button class="btn num" onclick="addValue('8')">8</button>
+            <button class="btn num" onclick="addValue('9')">9</button>
+            <button class="btn keys" onclick="addValue('*')">*</button>
+            <button class="btn num" onclick="addValue('4')">4</button>
+            <button class="btn num" onclick="addValue('5')">5</button>
+            <button class="btn num" onclick="addValue('6')">6</button>
+            <button class="btn keys" onclick="addValue('-')">-</button>
+            <button class="btn num" onclick="addValue('1')">1</button>
+            <button class="btn num" onclick="addValue('2')">2</button>
+            <button class="btn num" onclick="addValue('3')">3</button>
+            <button class="btn keys" onclick="addValue('+')">+</button>
+            <button class="btn num" onclick="addValue('00')">00</button>
+            <button class="btn num" onclick="addValue('0')">0</button>
+            <button class="btn num" onclick="addValue('.')">.</button>
+            <button class="btn keys" onclick="result('=')">=</button>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

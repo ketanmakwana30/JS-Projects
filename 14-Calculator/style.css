@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+input::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    background-color: #333;
+}
+
+
+.container {
+    height: 500px;
+    width: 350px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: rgb(110, 108, 108);
+
+}
+
+.display {
+    height: 80px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #fff;
+    text-align: right;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.782);
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
+.num {
+    background-color: rgb(140, 140, 140);
+    transition: all 0.4s ease;
+    font-weight: 400;
+}
+
+.num:hover {
+    background-color: rgb(69, 62, 69);
+    color: white;
+}
+
+.keys {
+    color: orange;
+}
