@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: "Outfit", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    color: #fff;
+    background:linear-gradient(135deg, #0f131e  , #2f44cb 20%, #000000);
+}   
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    margin: 10% 0 0 10%;
+}
+
+.calculator h1 {
+    font-size: 60px;
+    text-shadow: 5px 4px 0px black;
+}
+
+.calculator span {
+    color: yellow;
+    text-shadow: 9px 4px 9px rgb(15, 0, 0);
+    font-size: 70px;
+}
+
+
+.input-box {
+    padding: 35px;
+    margin: 40px 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255,0.2);
+}
+
+.input-box input {
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.input-box button {
+    background-color: rgb(255, 255, 0);
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #161515;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#result {
+    font-size: 1.3rem;
+}
