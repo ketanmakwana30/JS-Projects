@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Delius&family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./Image/gradient-bg.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+
+.container {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+.container h1 {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+.container #p {
+    font-size: 1.1rem;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.container #text {
+    width: 60%;
+    height: 150px;
+    resize: vertical;
+    background-color: white;
+    border: 1px solid rgb(134, 9, 188);
+    border-radius: 12px;
+    padding: 18px;
+    outline: none;
+    color: #333;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-boxs {
+    width: 10rem;
+    height: 4rem;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(74, 14, 162);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+span {
+    color: rgb(253, 255, 111);
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+#clearBtn {
+    padding: 17px 50px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgb(233, 233, 233);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+
+    &&:hover {
+        transform: translateY(-3px);
+        background-color: rgb(255, 255, 255);
+    }
+
+    &&:focus {
+        background-color: rgb(255, 255, 255);
+
+    }
+}
