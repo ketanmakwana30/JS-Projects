@@ -7,30 +7,39 @@ let btn = document.querySelector("#clearBtn");
 
 text.addEventListener("input", () => {
 
-    const words = text.value.trim().split(/\s+/).filter(function(word) {
+    const words = text.value.trim().split(/\s+/).filter(function (word) {
         return word !== "";
     });
     wordCount.textContent = words.length;
-    
-    const letter = text.value.replaceAll(" ", "");  
+
+    const letter = text.value.replaceAll(" ", "");
     letterCount.textContent = letter.length;
 
-    const sentence  = text.value.split(/[.!?]/).filter(s => s.trim() !== "");  
+    const sentence = text.value.split(/[.!?]/).filter(s => s.trim() !== "");
     sentenceCount.textContent = sentence.length;
-    
+
     const time = Math.ceil(words.length / 100);
-    if(words.length <= 100){
+    if (words.length <= 100) {
         timeCount.textContent = "Less than a min";
-    }else {
-        timeCount.textContent = `${time -1} Min`;
+    } else {
+        timeCount.textContent = `${time - 1} Min`;
+    }
+
+    if (text.value === " ") {
+        text.value = "";
+        wordCount.textContent = "";
+        letterCount.textContent = "";
+        sentenceCount.textContent = "";
+        timeCount.textContent = "";
+
     }
 });
 
 btn.addEventListener("click", () => {
     text.value = "";
-     wordCount.textContent = "";
-     letterCount.textContent = "";
-     sentenceCount.textContent = "";
-     timeCount.textContent = "";
-    
+    wordCount.textContent = "";
+    letterCount.textContent = "";
+    sentenceCount.textContent = "";
+    timeCount.textContent = "";
+
 })
