@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Delius&family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+    display: flex;
+  font-family: "Roboto", sans-serif;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background-image: url('https://plus.unsplash.com/premium_photo-1701596398988-2d62e2bddc36?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.clock-body {
+  height: 600px;
+  width: 900px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.clock-body h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.time-container {
+  position: relative;
+  padding: 20px;
+  font-size: 80px;
+  border-radius: 12px;
+  border: 4px solid black;
+}
+
+#session {
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+
+#date {
+  font-size: 1.3rem;
+} 
