@@ -1,0 +1,357 @@
+/* ========================
+   RESET & BASE
+======================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0f0ee;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================
+   LAYOUT
+======================== */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 24px;
+}
+
+/* ========================
+   SIDE CONTROLS
+======================== */
+.side-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ctrl-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.15s, transform 0.1s;
+}
+
+.ctrl-btn:hover { background: #f0f0f0; transform: scale(1.05); }
+.ctrl-btn:active { transform: scale(0.96); }
+
+/* ========================
+   CARD WRAPPER & STACK
+   KEY FIX: wrapper must have
+   explicit height so absolute
+   children are visible
+======================== */
+.card-wrapper {
+    position: relative;
+    width: 270px;
+    min-height: 340px;
+}
+
+.stack {
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+/* ========================
+   CARD
+======================== */
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+}
+
+/* ========================
+   AVATAR  — THE IMAGE FIX
+   Must have explicit w/h AND
+   overflow:hidden on wrapper
+======================== */
+.avatar-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: #e0e0e0;
+}
+
+.avatar-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ========================
+   CARD CONTENT
+======================== */
+.card-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.info-label { font-size: 12px; color: #999; flex-shrink: 0; }
+
+.info-value {
+    font-size: 12px;
+    color: #222;
+    font-weight: 500;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+}
+
+/* ========================
+   CATEGORY BADGE
+======================== */
+.cat-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1.5px solid;
+    white-space: nowrap;
+}
+
+.cat-Emergency { background: #fff0f0; color: #cc2222; border-color: #f5b0b0; }
+.cat-Important { background: #fff8ee; color: #b86000; border-color: #f5d08a; }
+.cat-Urgent    { background: #f3f0ff; color: #5b3fc4; border-color: #c4b8f5; }
+.cat-NoRush    { background: #f0fff5; color: #1a7a3c; border-color: #9de0b8; }
+
+/* ========================
+   CARD ACTIONS
+======================== */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.btn-call, .btn-msg {
+    flex: 1;
+    border: none;
+    border-radius: 24px;
+    padding: 9px 0;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-call { background: #111; color: #fff; }
+.btn-call:hover { background: #333; }
+
+.btn-msg { background: transparent; color: #111; border: 1.5px solid #ddd; }
+.btn-msg:hover { background: #f5f5f5; }
+
+/* ========================
+   EMPTY STATE
+======================== */
+.empty-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+}
+
+.empty-state.visible { display: flex; }
+.empty-icon { font-size: 36px; }
+
+/* ========================
+   MODAL OVERLAY
+======================== */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.28);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.overlay.open { display: flex; }
+
+/* ========================
+   MODAL
+======================== */
+.modal {
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px 22px 20px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+    animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+/* ========================
+   FORM FIELDS
+======================== */
+.field { margin-bottom: 14px; }
+
+.field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.field input {
+    width: 100%;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #111;
+    outline: none;
+    background: #fafafa;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.field input:focus { border-color: #aaa; background: #fff; }
+.field input::placeholder { color: #bbb; }
+.field input.error { border-color: #f04040; }
+
+/* ========================
+   CATEGORY PILLS
+======================== */
+.cats { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.cat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1.5px solid;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.12s;
+}
+
+.pill-check {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1.5px solid currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.cat-pill.emergency { color: #cc2222; border-color: #f5b0b0; }
+.cat-pill.important { color: #b86000; border-color: #f5d08a; }
+.cat-pill.urgent    { color: #5b3fc4; border-color: #c4b8f5; }
+.cat-pill.norush    { color: #1a7a3c; border-color: #9de0b8; }
+
+.cat-pill.emergency.active { background: #fff0f0; }
+.cat-pill.important.active { background: #fff8ee; }
+.cat-pill.urgent.active    { background: #f3f0ff; }
+.cat-pill.norush.active    { background: #f0fff5; }
+
+.cat-pill.active .pill-check::after { content: "✓"; }
+
+/* ========================
+   MODAL BUTTONS
+======================== */
+.create-note-btn {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.15s;
+}
+
+.create-note-btn:hover { background: #333; }
+
+.close-form {
+    width: 100%;
+    background: transparent;
+    color: #888;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 28px;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.close-form:hover { background: #f5f5f5; color: #444; }
