@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Gallery</h1>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="city">City</button>
+      <button class="filter-btn" data-filter="people">People</button>
+    </div>
+  </header>
+
+  <div class="gallery" id="gallery">
+    <div class="gallery-item" data-category="people">
+      <img src="https://shorturl.at/niQnd" alt="rashmika">
+      <div class="overlay"><span>Rashmika</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="nature">
+      <img src="https://shorturl.at/wDYRJ" alt="sea">
+      <div class="overlay"><span>Natural Sea</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="people">
+      <img src="https://i.pinimg.com/736x/89/04/f8/8904f8a84466ee5a79767243808e51dd.jpg" alt="shah rukh khan">
+      <div class="overlay"><span>Shah Rukh Khan</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="city">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV7hHNCu8IMRsJSxiLcfhCRnIaDkL2bO4V8w&s" alt="america">
+      <div class="overlay"><span>USA</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="nature">
+      <img src="https://i.ytimg.com/vi/_-8xuMYWCq4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAa9NzhLII9u2e_lldZRLwZ1Mr_bw" alt="flower">
+      <div class="overlay"><span>Flower</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="people">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ5Y5188XGNzckYhiaVFx9AMFd1kfikg6RRg&s" alt="tamanna">
+      <div class="overlay"><span>Tamanna Bhatiya</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="city">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRekLJtr5nsP77rrKcxxsL3nP3gjkDqPbS5tQ&s" alt="Dubai">
+      <div class="overlay"><span>Dubai</span></div>
+    </div>
+
+    <div class="gallery-item" data-category="people">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_In3v4tpEx2UOXL5ekrNrPca8ymI-RdS17Q&s" alt="Mukesh">
+      <div class="overlay"><span>Mukesh Ambani</span></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <button class="prev-btn" id="prevBtn">&#10094;</button>
+    <img src="" alt="lightbox img" id="lightboxImg">
+    <button class="next-btn" id="nextBtn">&#10095;</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
