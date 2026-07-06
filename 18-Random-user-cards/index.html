@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div
+      class="cards gap-4 min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center py-10"
+    ></div>
+    <button
+      class="refresh-btn absolute top-[80%] left-1/2 -translate-x-1/2 mx-auto mt-6 flex items-center gap-3 rounded-3xl bg-slate-100 px-8 py-4 text-xl font-semibold text-slate-950 shadow-2xl shadow-slate-900/40 transition hover:-translate-y-1 hover:bg-slate-200"
+      aria-label="Refresh"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="h-7 w-7"
+      >
+        <path d="M12 4V1L8 5l4 4V6a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z" />
+      </svg>
+      Refresh
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
