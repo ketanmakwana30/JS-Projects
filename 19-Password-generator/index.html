@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="copy-bar">
+        <span id="show-pass"></span>
+        <i class="ri-save-2-line copy"></i>
+      </div>
+      <div class="condition">
+        <div class="check-box">
+          <input type="checkbox" name="upper" id="upper" checked />
+          <label for="upper">Uppercase</label>
+        </div>
+        <div class="check-box">
+          <input type="checkbox" name="lower" id="lower" />
+          <label for="lower">Lowercase</label>
+        </div>
+        <div class="check-box">
+          <input type="checkbox" name="num" id="num" />
+          <label for="num">Number</label>
+        </div>
+        <div class="check-box">
+          <input type="checkbox" name="symbol" id="symbol" />
+          <label for="symbol">Symbol</label>
+        </div>
+        <div>
+          <span class="length">Password Length</span>
+        </div>
+        <div>
+          <input
+            id="length"
+            class="length-input"
+            type="number"
+            placeholder="Enter Length"
+          />
+        </div>
+      </div>
+      <button id="btn">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
