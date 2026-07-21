@@ -1,3 +1,3 @@
 ## Password Generator
 
-![password](../Screenshot/18-password.png)
+![password](../Screenshot/19-password.png)
