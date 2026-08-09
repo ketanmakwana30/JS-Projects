@@ -19,32 +19,39 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  background-color: rgb(148, 170, 148);
 }
 
 #main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(148, 170, 148);
+  padding: 10px;
 }
 
 #panel {
-  width: 80%;
-  height: 80%;
-  border-radius: 10px;
+  width: 95%;
+  max-width: 900px;
+  height: 90vh;
+  max-height: 700px;
+  border-radius: 12px;
   background-color: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 #ptop {
-  padding: 0 10%;
+  padding: 10px 4%;
   width: 100%;
-  height: 100px;
+  min-height: 75px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 10px;
   color: #fff;
   background-color: rgb(49, 121, 49);
 }
@@ -53,17 +60,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .elem h2 {
   font-weight: 400;
+  font-size: clamp(0.85rem, 2.5vw, 1.2rem);
 }
 
 .box {
-  padding: 8px 20px;
-  font-weight: 550;
-  font-size: 1rem;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
   border-radius: 5px;
   color: rgb(6, 20, 6);
   background-color: #fff;
@@ -73,39 +81,99 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   width: 100%;
-  padding: 20px;
-  height: calc(100% - 100px);
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  align-content: flex-start;
+}
+
+/* Custom scrollbar for small screens */
+#pbtm::-webkit-scrollbar {
+  width: 6px;
+}
+
+#pbtm::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .score-card {
-  background-color: green;
-  height: 200px;
+  height: auto;
+  padding: 30px 20px;
   border-radius: 12px;
   color: white;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  width: 90%;
+  max-width: 320px;
+  margin: 10% auto;
+  text-align: center;
+  background-color: rgb(49, 121, 49);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.score-card h1 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
 }
 
 .bubble {
-  width: 40px;
-  height: 40px;
+  width: clamp(32px, 5vw, 42px);
+  height: clamp(32px, 5vw, 42px);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
   font-weight: 500;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   color: white;
   background-color: rgb(32, 145, 49);
-  transition: all 0.1s linear;
-  &:hover {
-    background-color: rgb(19, 104, 32);
+  transition:
+    transform 0.1s ease,
+    background-color 0.1s ease;
+  user-select: none;
+}
+
+.bubble:hover {
+  background-color: rgb(19, 104, 32);
+  transform: scale(1.08);
+}
+
+.bubble:active {
+  transform: scale(0.95);
+}
+
+/* Media Queries for Small Devices */
+
+@media (max-width: 480px) {
+  #panel {
+    width: 100%;
+    height: 96vh;
+    border-radius: 8px;
+  }
+
+  #ptop {
+    padding: 8px 2%;
+    gap: 4px;
+    min-height: 65px;
+  }
+
+  .elem {
+    gap: 4px;
+  }
+
+  .box {
+    padding: 4px 8px;
+  }
+
+  #pbtm {
+    padding: 10px;
+    gap: 6px;
   }
 }
