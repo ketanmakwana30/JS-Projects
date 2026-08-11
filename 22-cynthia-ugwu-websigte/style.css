@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  /* cursor: none; */
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  user-select: none;
+}
+
+#minicircle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.7s;
+  background-color: white;
+}
+
+.bounding {
+  width: fit-content;
+  overflow: hidden;
+}
+
+.bounding .boundingelem {
+  transform: translateY(100%);
+}
+
+#main {
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+#nav h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#heading {
+  margin-top: 40px;
+}
+
+#manu {
+  cursor: pointer;
+}
+
+#heading h1 {
+  opacity: 0.6;
+  font-size: 9.5vw;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-weight: 550;
+  line-height: 1;
+}
+
+#heading #secondh1 {
+  margin-left: 15vw;
+}
+
+#area-text {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: end;
+  text-align: right !important;
+}
+
+#heading h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+#small-heading {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  margin-top: 60px;
+  text-align: right;
+  padding: 20px;
+}
+
+#small-heading h5 {
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 1.1vw;
+  margin-top: 0.7vw;
+  font-weight: 500;
+}
+
+#hero-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+#hero-footer a {
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+#iconset {
+  display: flex;
+  gap: 5px;
+}
+
+#iconset .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #ffffffb7;
+  color: black;
+}
+
+#second {
+  padding: 100px 10vw 0 2vw;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.elem {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border-top: 1px solid #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lastelem {
+  border-bottom: 1px solid #888;
+}
+
+.elem h1 {
+  text-transform: uppercase;
+  opacity: 0.7;
+  padding: 2vw 0 2vw 2vw;
+  font-size: 7vw;
+}
+
+.elem img {
+  opacity: 0;
+  z-index: 999;
+  border-radius: 12px;
+  position: absolute;
+  height: 140%;
+}
+
+#about {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.about-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 50px;
+  padding: 5vw 3vw;
+}
+
+#about img {
+  width: 200px;
+}
+
+.about-text h5 {
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  width: 40vw;
+  text-align: justify;
+  padding-right: 5vw;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.about-text a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+#about-footer {
+  padding: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+#about-footer p {
+  font-size: 1vw;
+  opacity: 0.7;
+}
+
+#about-footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4vw;
+}
+
+footer {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.copy {
+  display: flex;
+  gap: 25px;
+  font-weight: 600;
+}
+
+.links {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
