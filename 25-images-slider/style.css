@@ -25,7 +25,7 @@
 .card h2 {
     position: absolute;
     bottom: 20px;
-    left: 40%;
+    left: 50%;
     transform: translateX(-50%);
     color: white;
     writing-mode: vertical-rl;
@@ -41,15 +41,23 @@
 .outline-text {
     font-size: 3rem;
     font-weight: 800;
-
-    /* Make the inner font completely transparent */
     color: transparent;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
     -webkit-text-fill-color: transparent;
-
-    /* Create the stylish outline */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
+}
 
-    /* Optional: add a soft shadow for readability over busy backgrounds */
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+@media (max-width: 400px) {
+    .slider {
+        flex-direction: column;
+        height: 95vh;
+    }
+
+    .card h2 {
+        transform: translateX(-50%);
+        writing-mode: horizontal-tb;
+        bottom: 20px;
+        left: 50%;
+    }
 }
