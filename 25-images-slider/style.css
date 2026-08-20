@@ -1,0 +1,55 @@
+.slider {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+    position: relative;
+    min-width: 80px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: flex 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+    transform: translateX(-50%);
+    color: white;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+
+}
+
+/* ⭐ Main effect */
+.card:hover {
+    flex: 5;
+}
+
+.outline-text {
+    font-size: 3rem;
+    font-weight: 800;
+
+    /* Make the inner font completely transparent */
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    /* Create the stylish outline */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+
+    /* Optional: add a soft shadow for readability over busy backgrounds */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
